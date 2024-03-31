@@ -1,0 +1,103 @@
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto Flex", sans-serif;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+main .card {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .35);
+    padding: 24px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+main .card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .45);
+}
+
+main .list-games {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+}
+
+main .list-games .game {
+    text-align: center;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+main .list-games .game:hover {
+    background-color: white;
+    color: black;
+}
+
+main .info {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 24px;
+}
+
+.game-play .actions {
+    text-align: right;
+}
+
+.btn-bet {
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #FFC107;
+    box-shadow: inset 0px -4px 0px #826201;
+    color: #5b4605;
+    font-weight: 800;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.btn-bet:hover {
+    box-shadow: inset 0px -2px 2px #826201;
+}
+
+.btn-bet:active {
+    box-shadow: inset 0px 0px 4px #826201;
+}
+
+.coin-animation {
+    display: none;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.coin-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.coin-background.on {
+    display: block;
+}
+
+.coin-animation.on {
+    display: block;
+}

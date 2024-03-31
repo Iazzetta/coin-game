@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="game-play card">
+    <h1 class="title">{{game.name}}</h1>
+    <p>Você está apostando <strong>{{ "R$ {:,.2f}".format(game.buy_in) }}</strong></p>
+    <div class="actions">
+        <button class="btn-bet" data-game-id="{{game.id}}">Apostar</button>
+    </div>
+</section>
+<div class="coin-background"></div>
+<img class="coin-animation" src="{{ url_for('static', filename='images/coin_rotating.gif')}}" alt="coin">
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %}
